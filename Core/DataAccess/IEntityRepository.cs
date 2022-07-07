@@ -1,4 +1,4 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,12 +6,13 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     //generic constraint
     //class : referans tip
     //IEntity : IEntity olabilir yada IEntity implemente eden bir nesne olabilir...
     //new() : new'lenebilir olabilir -- IEntity new'lenemez interface olduğu için...
+    //***** Core Katmanı Diğer katmanları referans ALMAZ.. *****
     public interface IEntityRepository<T> where T : class,IEntity,new()
     {
         List<T> GetAll(Expression<Func<T,bool>> filter=null);//ürünleri getitirir filtere verebilir yada vermeyebilir...
