@@ -19,5 +19,7 @@ namespace Business.Abstract
         IDataResult<Product> GetById(int productId);
 
         IResult Add(Product product);//void olan yerde IResult denilcek
+
+        //RESTFUL --> HTTP(İnternet Protokülü) --> 
     }
 }
