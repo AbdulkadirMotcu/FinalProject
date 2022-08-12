@@ -21,6 +21,9 @@ namespace Business.Abstract
 
         IResult Add(Product product);//void olan yerde IResult denilcek
         IResult Update(Product product);
+
+        IResult AddTransactionalTest(Product product);
+
         //RESTFUL --> HTTP(İnternet Protokülü) --> 
     }
 }
